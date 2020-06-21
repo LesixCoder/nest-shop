@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import * as md5 from 'md5';
 //引入验证码库
 import * as svgCaptcha from 'svg-captcha';
 
@@ -12,5 +13,9 @@ export class ToolsService {
       height: 34,
       background: '#cc9966',
     });
+  }
+
+  getMd5(str: string) {
+    return md5(str);
   }
 }

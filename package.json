@@ -34,6 +34,7 @@
     "loader": "^2.1.1",
     "loader-builder": "^2.7.0",
     "loader-connect": "^1.0.1",
+    "md5": "^2.2.1",
     "mongoose": "^5.9.19",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
