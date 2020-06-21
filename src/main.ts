@@ -17,6 +17,20 @@ async function bootstrap() {
     app.use(loaderConnect.less(rootDir));
   }
 
+  //配置cookie中间件
+  app.use(cookieParser('this signed cookies'));
+
+  //配置session的中间件
+  app.use(
+    session({
+      secret: 'keyboard cat',
+      resave: true,
+      saveUninitialized: true,
+      cookie: { maxAge: 219000, httpOnly: true },
+      rolling: true,
+    }),
+  );
+
   app.useStaticAssets(join(rootDir, 'public'), {
     // prefix: '/static/',
   });
@@ -28,20 +42,6 @@ async function bootstrap() {
   // 配置模板（视图）的基本目录
   app.setBaseViewsDir(join(rootDir, 'views'));
   swig.setDefaults({ cache: false });
-
-  //配置cookie中间件
-  app.use(cookieParser('this signed cookies'));
-
-  //配置session的中间件
-  app.use(
-    session({
-      secret: 'keyboard cat',
-      resave: true,
-      saveUninitialized: true,
-      cookie: { maxAge: 1000 * 60 * 30, httpOnly: true },
-      rolling: true,
-    }),
-  );
 
   await app.listen(3001);
 }

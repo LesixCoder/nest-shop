@@ -5834,6 +5834,13 @@ onetime@^5.1.0:
   dependencies:
     mimic-fn "^2.1.0"
 
+opentype.js@^0.7.3:
+  version "0.7.3"
+  resolved "https://registry.npm.taobao.org/opentype.js/download/opentype.js-0.7.3.tgz#40fb8ce18bfd60e74448efdfe442834098397aab"
+  integrity sha1-QPuM4Yv9YOdESO/f5EKDQJg5eqs=
+  dependencies:
+    tiny-inflate "^1.0.2"
+
 optimist@~0.6:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/optimist/-/optimist-0.6.1.tgz#da3ea74686fa21a19a111c326e90eb15a0196686"
@@ -7361,6 +7368,13 @@ supports-hyperlinks@^2.0.0:
     has-flag "^4.0.0"
     supports-color "^7.0.0"
 
+svg-captcha@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.npm.taobao.org/svg-captcha/download/svg-captcha-1.4.0.tgz#32ead3c6463936c218bb3bc9ed04fea4eeffe492"
+  integrity sha1-MurTxkY5NsIYuzvJ7QT+pO7/5JI=
+  dependencies:
+    opentype.js "^0.7.3"
+
 swig@^1.4.2:
   version "1.4.2"
   resolved "https://registry.yarnpkg.com/swig/-/swig-1.4.2.tgz#4085ca0453369104b5d483e2841b39b7ae1aaba5"
@@ -7472,6 +7486,11 @@ timers-ext@^0.1.5, timers-ext@^0.1.7:
   dependencies:
     es5-ext "~0.10.46"
     next-tick "1"
+
+tiny-inflate@^1.0.2:
+  version "1.0.3"
+  resolved "https://registry.npm.taobao.org/tiny-inflate/download/tiny-inflate-1.0.3.tgz#122715494913a1805166aaf7c93467933eea26c4"
+  integrity sha1-EicVSUkToYBRZqr3yTRnkz7qJsQ=
 
 tmp@^0.0.33:
   version "0.0.33"
