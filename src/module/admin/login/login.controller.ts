@@ -1,9 +1,10 @@
 import { Body, Controller, Get, Post, Render, Req, Res } from '@nestjs/common';
 import { Response } from 'express';
+import { Config } from '../../../config/config';
 import { AdminService } from '../../../service/admin/admin.service';
 import { ToolsService } from '../../../service/tools/tools.service';
 
-@Controller('admin/login')
+@Controller(`${Config.adminPath}/login`)
 export class LoginController {
   constructor(
     private toolsService: ToolsService,

@@ -1,6 +1,6 @@
 import { Controller, Get, Render } from '@nestjs/common';
-
-@Controller('admin/main')
+import { Config } from '../../../config/config';
+@Controller(`${Config.adminPath}/main`)
 export class MainController {
   @Get()
   @Render('admin/main/index')
